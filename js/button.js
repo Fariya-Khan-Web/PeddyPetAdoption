@@ -12,7 +12,21 @@ function categoryButton(items){
         button.innerHTML = `
         <img class="w-8 md:w-auto" src="${item.category_icon}" alt="" />
         <h4 class="my-auto mx-5 font-bold text-lg md:text-xl">${item.category}</h4>`;
+        
+        button.addEventListener("click", () => onlyThisCategory(item.category))
 
         buttonContainer.appendChild(button);
+
+
     }
 }
+
+function onlyThisCategory(category){
+    
+    fetch(`https://openapi.programming-hero.com/api/peddy/category/${category}`)
+       .then(res => res.json())
+       .then(info => allPets(info.data))
+       .catch(error => console.log(error))
+
+}
+
