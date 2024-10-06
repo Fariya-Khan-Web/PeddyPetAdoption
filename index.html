@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peddy</title>
+    <link rel="shortcut icon" href="./images/logo.webp" type="image/x-icon">
+
+    <!-- Daisy ui -->
+
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+
+</head>
+
+<body>
+    <nav class=" w-[85%] flex justify-between max-w-screen-xl mx-auto py-4">
+        <div class="flex">
+            <img class="w-8 h-8 mx-2" src="./images/logo.webp" alt="">
+            <h1 class="font-bold text-2xl">Peddy</h1>
+        </div>
+
+        <div class="mr-16 text-gray-700 hidden md:block">
+            <button><a href="#home">Home</a></button>
+            <button class="mx-5"><a href="#shop">Shop</a></button>
+            <button><a href="#contact">Contact</a></button>
+        </div>
+
+        <div class="flex">
+            <img class="w-10" src="./images/profile.png" alt="">
+            <img class="w-10 md:hidden" src="./images/menu.png" alt="">
+        </div>
+
+        <!-- <div>
+            <img class="w-10 md:hidden" src="./images/menu.png" alt="">
+        </div> -->
+    </nav>
+
+    <!-- home -->
+
+    <header id="home" class="text-center w-[85%] max-w-screen-xl mx-auto">
+
+        <p class="mt-8 mb-3">Bringing Families Together ❤️‍🔥 </p>
+        <h1 class="text-4xl lg:text-6xl font-bold mb-8">Your Path to Adoption <br> Starts Here</h1>
+        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking <br class="hidden md:block"> at its layout. The point of using Lorem Ipsum is that it has a.</p>
+        <button class="btn bg-[#0E7A81] text-white my-7">View More</button>
+        <img class="mx-auto" src="./images/pet.webp" alt="">
+
+    </header>
+
+    <!-- shop -->
+
+    <main id="shop" class="w-[85%] max-w-screen-xl mx-auto">
+        <h2 class="text-4xl text-center font-bold my-5">Adopt Your Best Friend</h2>
+        <p class="text-center my-5">It is a long established fact that a reader will be distracted by the readable content of a <br class="hidden md:block"> page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+
+        <!-- buttons -->
+        <div id="button-container" class="max-w-screen-xl my-10 grid gap-5 grid-cols-2 lg:grid-cols-4" >
+
+
+        </div>
+
+        <div class="my-5 flex justify-between max-w-screen-xl mx-auto">
+            <h4 class="text-xl font-bold">Best Deal For You</h4>
+            <button class="btn bg-[#0E7A81] text-white">Sort by Price</button>
+        </div>
+        
+        <!-- pets -->
+
+        <div id="pets" class="grid grid-cols-4">
+            <div id="available" class="col-span-3 border bg-slate-700">
+
+
+
+            </div>
+            <div id="liked" class="border bg-slate-700">
+
+
+            </div>
+
+
+        </div>
+    </main>
+
+    <!-- footer -->
+
+    <footer id="contact" class="bg-black text-white">
+        <div class=" w-[80%] max-w-screen-xl mx-auto md:flex flex-wrap justify-between py-20">
+            <div class="mb-10">
+                <div class="flex mb-5">
+                    <img class="w-8 h-8 mr-2" src="./images/logo.webp" alt="">
+                    <h1 class="font-bold text-2xl">Peddy</h1>
+                </div>
+                <p>Location: av. Washington 165, NY CA</p>
+                <p>54003</p>
+                <p>Phone: +31 85 964 47 25</p>
+                <p> Email: info@yourdomain.com</p>
+                <p>Openings hours: 9.00 AM - 5.00 PM</p>
+
+                <!-- <div class="flex">
+                    <img class="w-10 h-10" src="https://www.flaticon.com/free-icon/facebook_174848?term=facebook&page=1&position=6&origin=search&related_id=174848" alt="">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-youtube"></i>
+                    <i class="fa-brands fa-x-twitter"></i>
+                </div> -->
+            </div>
+
+            <div  class="text-gray-400 mb-10">
+                <h5 class="text-white font-bold mb-4 text-lg">Useful Links</h5>
+                <p><a href="">Home</a></p>
+                <p><a href="">About Us</a></p>
+                <p><a href="">Animals</a></p>
+                <p><a href="">Foundation</a></p>
+                <p><a href="">Contact</a></p>
+            </div>
+            
+            <div>
+                <h5 class="font-bold mb-4 text-lg">Drop a Message</h5>
+                <input class="text-gray-800 w-full p-2 rounded-md" type="text" placeholder="Enter your email"><br>
+                <button class="btn bg-[#0E7A81] text-white w-full my-3">Subscribe</button>
+            </div>
+        </div>
+    </footer>
+
+
+<!-- script -->
+
+<script src="./js/button.js"></script>
+
+</body>
+
+</html>
