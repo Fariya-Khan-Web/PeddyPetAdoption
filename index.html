@@ -7,6 +7,9 @@
     <title>Peddy</title>
     <link rel="shortcut icon" href="./images/logo.webp" type="image/x-icon">
 
+    <!-- CSS -->
+     <link rel="stylesheet" href="./style/style.css">
+
     <!-- Daisy ui -->
 
     <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
@@ -44,7 +47,7 @@
 
         <p class="mt-8 mb-3">Bringing Families Together ❤️‍🔥 </p>
         <h1 class="text-4xl lg:text-6xl font-bold mb-8">Your Path to Adoption <br> Starts Here</h1>
-        <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking <br class="hidden md:block"> at its layout. The point of using Lorem Ipsum is that it has a.</p>
+        <p>Looking for a new best friend? Adopt a pet today! Our shelter is full of loving dogs and cats waiting <br class="hidden md:block"> for a forever home. Start your adoption journey now and make a difference!</p>
         <button class="btn bg-[#0E7A81] text-white my-7"><a href="#shop">View More</a></button>
         <img class="mx-auto" src="./images/pet.webp" alt="">
 
@@ -54,7 +57,7 @@
 
     <main id="shop" class="w-[90%] max-w-screen-xl mx-auto">
         <h2 class="text-4xl text-center font-bold my-5">Adopt Your Best Friend</h2>
-        <p class="text-center my-5">It is a long established fact that a reader will be distracted by the readable content of a <br class="hidden md:block"> page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+        <p class="text-center my-5">Each pet comes with a unique personality, ready to fill your life with joy and companionship. By adopting, <br class="hidden md:block"> you gain a loyal friend who will love you unconditionally.</p>
 
         <!-- buttons -->
         <div id="button-container" class="max-w-screen-xl my-10 grid gap-5 grid-cols-2 lg:grid-cols-4" >
@@ -64,25 +67,47 @@
 
         <div class="my-5 flex justify-between max-w-screen-xl mx-auto">
             <h4 class="text-xl font-bold">Best Deal For You</h4>
-            <button class="btn bg-[#0E7A81] text-white">Sort by Price</button>
+            <button id="sort-button" class="btn bg-[#0E7A81] text-white ">Sort by Price</button>
         </div>
         
         <!-- pets -->
 
-        <div id="pets" class="my-5 md:grid md:gap-2 grid-cols-4">
-            <div id="pet-container" class="col-span-3 grid md:grid-cols-2 lg:grid-cols-3 gap-3 p-3 border rounded-lg ">
+        <div id="pets" class="my-5 min-h-40 md:grid md:gap-2 grid-cols-4 relative">
+            <div id="pet-container" class="col-span-3 grid md:grid-rows-9 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-6 gap-3 p-3 border rounded-lg ">
 
 
 
             </div>
-            <div id="liked" class="border rounded-lg grid gap-2 grid-cols-2">
+
+            <div id="liked" class="p-3 border rounded-lg grid gap-2 grid-cols-2 md:grid-cols-1 lg:grid-cols-2">
 
 
             </div>
 
 
+            <div id="loading" class="hidden absolute inset-0 items-center justify-center bg-opacity-50 z-50">
+                <span class="loading loading-bars loading-lg"></span>
+            </div>
         </div>
+        
     </main>
+
+    <!-- <div id="dialogContainer" class="h-screen items-center flex justify-center bg-gray-300/20 fixed inset-0">
+        <div class="modal-box text-center">
+            <h3 class="text-4xl font-bold">Congrates!</h3>
+            <div>
+                <img src="assets/coin.png" class="mx-auto pt-3" alt="">
+            </div>
+
+            <p class="py-4">You have donated for humankind.</p>
+            <h2 class="text-xl">Successfully</h2>
+
+            <div class="modal-action">
+                 if there is a button in form, it will close the modal
+                <button id="dialogCloseBtn" class="btn mx-auto bg-lime-200">close confirmation</button>
+            </div>
+        </div>
+    </div> -->
     
 
     <!-- footer -->
@@ -119,7 +144,7 @@
             
             <div>
                 <h5 class="font-bold mb-4 text-lg">Drop a Message</h5>
-                <input class="text-gray-800 w-full p-2 rounded-md" type="text" placeholder="Enter your email"><br>
+                <input class="text-gray-800 w-full p-2 rounded-md" type="email" placeholder="Enter your email"><br>
                 <button class="btn bg-[#0E7A81] text-white w-full my-3">Subscribe</button>
             </div>
         </div>
@@ -130,6 +155,7 @@
 
 <script src="./js/button.js"></script>
 <script src="./js/pets.js"></script>
+<script src="./js/pet-details.js"></script>
 
 </body>
 

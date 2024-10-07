@@ -1,0 +1,14 @@
+#liked{
+    grid-template-rows: repeat(25, 110px);
+}
+@media only screen and (min-width: 640px) {
+    #liked {
+      grid-template-rows: repeat(25, 115px);
+      
+    }
+}
+
+.active{
+
+    background-color: green;
+}
