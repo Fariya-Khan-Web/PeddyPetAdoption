@@ -44,7 +44,7 @@ function onlyThisCategory(category){
         
         // active status
         const activeBtn = document.getElementById(`${category}`)
-        console.log(activeBtn)
+        
         activeBtn.classList.add("rounded-full")
         activeBtn.classList.add("bg-green-200")
         
@@ -58,25 +58,7 @@ function onlyThisCategory(category){
        loading.classList.remove('flex')
        loading.classList.add('hidden')
 
-    }, 1500);
-    
-    // fetch(`https://openapi.programming-hero.com/api/peddy/category/${category}`)
-    //    .then(res => res.json())
-    //    .then(info => {
-
-    //     // remove active status
-    //     removeActive()
-        
-    //     // active status
-    //     const activeBtn = document.getElementById(`${category}`)
-    //     console.log(activeBtn)
-    //     activeBtn.classList.add("rounded-full")
-    //     activeBtn.classList.add("bg-green-200")
-        
-
-    //     allPets(info.data)})
-    //    .catch(error => console.log(error))
-
+    }, 2000);
 }
 
 // active button
@@ -84,7 +66,7 @@ function onlyThisCategory(category){
 let removeActive = () => {
     const Buttons = document.getElementsByClassName("btn-lg")
     for(let btn of Buttons){
-        console.log(btn)
+        
         btn.classList.remove("rounded-full")
         btn.classList.remove("bg-green-200")
     }

@@ -5,8 +5,12 @@ fetch("https://openapi.programming-hero.com/api/peddy/pets")
 
 function allPets(elements) {
 
+    // empty container before going to another category
+
     const petContainer = document.getElementById("pet-container");
     petContainer.innerText = "";
+    
+    // if no pets are avaiable
 
     if (elements.length == 0) {
 
@@ -20,6 +24,16 @@ function allPets(elements) {
         petContainer.classList.add("grid")
         petContainer.classList.remove("text-center")
     }
+
+    // sorting button
+
+    const sortButton = document.getElementById("sort-button");
+    
+    sortButton.addEventListener("click", () => {
+        
+        elements.sort((a, b) => b.price - a.price);
+        allPets(elements);
+    })
 
     // makeing cards with loop method
 
@@ -35,19 +49,19 @@ function allPets(elements) {
                 <h2 class="card-title font-bold">${pet.pet_name}</h2>
                 <div class="flex">
                     <img class="w-4 mr-1" src="./images/breed.png" alt="" />
-                    <p>Breed: ${pet.breed}</p>                
+                    <p>Breed: ${pet.breed?pet.breed:'not available'}</p>                
                 </div>
                 <div class="flex">
                     <img class="w-4 mr-1" src="./images/date.png" alt="" />
-                    <p>Birth: ${pet.date_of_birth}</p> 
+                    <p>Birth: ${pet.date_of_birth?pet.date_of_birth:'not available'}</p> 
                 </div>
                 <div class="flex">
                     <img class="w-4 mr-1" src="./images/gendar.png" alt="" />
-                    <p>Gender: ${pet.gender}</p> 
+                    <p>Gender: ${pet.gender?pet.gender:'not available'}</p> 
                 </div>
                 <div class="flex">
                     <img class="w-4 mr-1" src="./images/dollar.png" alt="" />
-                    <p>Price: ${pet.price}</p> 
+                    <p>Price: ${pet.price?pet.price:'not available'}</p> 
                 </div>
                 <hr/>
                 <div class="card-actions flex justify-between">
@@ -64,46 +78,21 @@ function allPets(elements) {
 
         const likeButton = document.getElementById(`like-${pet.petId}`);
         likeButton.addEventListener('click', () => {
-            liked(pet.petId)
-            console.log(`You liked the pet with ID: ${pet.petId}`);
-            console.log(likeButton)
+            liked(pet.petId);
         })
 
         // adopt button
 
         const adoptButton = document.getElementById(`adopt-${pet.petId}`)
         adoptButton.addEventListener('click', () => {
-            console.log(`You adopted the pet with ID: ${pet.petId}`);
-            console.log(adoptButton)
+            adopted();
         })
 
         // details button
 
         const detailsButton = document.getElementById(`details-${pet.petId}`)
         detailsButton.addEventListener('click', () => {
-            console.log(`You want to know details of pet with ID: ${pet.petId}`);
-            console.log(detailsButton)
+            details(pet.petId);
         })
-
     }
 }
-
-
-// sort in decsending order
-
-// function getPets(){
-//     fetch("https://openapi.programming-hero.com/api/peddy/pets")
-//        .then(res => res.json())
-//        .then(data => sorting(data.pets))
-//        .catch(error => console.log(error))
-// }
-
-// const sortButton = document.getElementById("sort-button");
-// sortButton.addEventListener("click",() => getPets());
-
-// function sorting(pets){
-//     console.log({pets})
-
-//     pets.sort((a, b) => b.price - a.price);
-
-// }
