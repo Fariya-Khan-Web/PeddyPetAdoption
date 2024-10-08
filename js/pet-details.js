@@ -64,9 +64,9 @@ function showDetails(data) {
     card.classList.remove('hidden');
 
     card.innerHTML = `
-    <div><img class="rounded-lg" src="${data.image}"/></div>
+    <div><img class="rounded-lg w-full" src="${data.image}"/></div>
     <h1 class="text-2xl font-bold my-3">${data.pet_name}</h1>
-    <div class="grid grid-cols-2 gap-x-4">
+    <div class="md:grid grid-cols-2 gap-x-4">
         <div class="flex">
             <img class="w-4 mr-1" src="./images/breed.png" alt="" />
             <p>Breed: ${data.breed ? data.breed : 'not available'}</p>                
