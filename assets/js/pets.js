@@ -17,7 +17,7 @@ function allPets(elements) {
         petContainer.classList.remove("grid")
         petContainer.classList.add("text-center")
         petContainer.innerHTML = `
-        <img class="mx-auto mt-20" src="./images/error.webp" alt="" />
+        <img class="mx-auto mt-20" src="./assets/img/error.webp" alt="" />
         <h1 class="text-3xl font-bold">No Information Available</h1>
         <p class="w-[70%] mx-auto mb-20">It looks like this category is currently empty. Please check back later as we're always adding new items!</p>`;
     } else {
@@ -48,24 +48,24 @@ function allPets(elements) {
             <div class="card-body">
                 <h2 class="card-title font-bold">${pet.pet_name}</h2>
                 <div class="flex">
-                    <img class="w-4 mr-1" src="./images/breed.png" alt="" />
+                    <img class="w-4 mr-1" src="./assets/img/breed.png" alt="" />
                     <p>Breed: ${pet.breed?pet.breed:'not available'}</p>                
                 </div>
                 <div class="flex">
-                    <img class="w-4 mr-1" src="./images/date.png" alt="" />
+                    <img class="w-4 mr-1" src="./assets/img/date.png" alt="" />
                     <p>Birth: ${pet.date_of_birth?pet.date_of_birth:'not available'}</p> 
                 </div>
                 <div class="flex">
-                    <img class="w-4 mr-1" src="./images/gendar.png" alt="" />
+                    <img class="w-4 mr-1" src="./assets/img/gendar.png" alt="" />
                     <p>Gender: ${pet.gender?pet.gender:'not available'}</p> 
                 </div>
                 <div class="flex">
-                    <img class="w-4 mr-1" src="./images/dollar.png" alt="" />
+                    <img class="w-4 mr-1" src="./assets/img/dollar.png" alt="" />
                     <p>Price: ${pet.price?pet.price:'not available'}</p> 
                 </div>
                 <hr/>
                 <div class="card-actions flex justify-between">
-                    <button id="like-${pet.petId}" class="btn liked-animals"><img class="w-6" src="./images/like.png" /></button>
+                    <button id="like-${pet.petId}" class="btn liked-animals"><img class="w-6" src="./assets/img/like.png" /></button>
                     <button id="adopt-${pet.petId}" class="btn text-[#19a0aa]">Adopt</button>
                     <button id="details-${pet.petId}" class="btn text-[#19a0aa]">Dtails</button>
                 </div>
