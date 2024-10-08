@@ -21,24 +21,3 @@ Peddy Pet Shop is a user-friendly website designed to help you find and adopt yo
 4. **Template Literals**: Enhances code readability and simplifies string interpolation.
 5. **Sort**: Enables sorting of animals by various criteria with minimal code.
 =======
-#Peddy Pet Shop
-
-##Description-
-Peddy Pet Shop is a website where you can adopt your next best friend. This shop has 4 different category of animals. You can navigate to each category with just one click.
-
-##5 key features of the project-
-1. active status of the category buttons
-2. 3 second countdown after adoption
-3. sorting animal in descending order onclick
-4. adding liked animals in a different section
-5. 2 second loading while going from one category to another
-
-##ES6 features used
-1. Arrow function
-2. setInterval()
-3. clearInterval()
-4. Template literals
-5. Sort
-
-#Live link-
->>>>>>> 4bdb62052cf2428daba37dddb4e193b817a8741f
