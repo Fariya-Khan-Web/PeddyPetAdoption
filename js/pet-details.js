@@ -66,23 +66,30 @@ function showDetails(data) {
     card.innerHTML = `
     <div><img class="rounded-lg" src="${data.image}"/></div>
     <h1 class="text-2xl font-bold my-3">${data.pet_name}</h1>
-    <div class="flex">
+    <div class="grid grid-cols-2 gap-x-4">
+        <div class="flex">
             <img class="w-4 mr-1" src="./images/breed.png" alt="" />
-            <p>Breed: ${data.breed}</p>                
-    </div>
-    <div class="flex">
+            <p>Breed: ${data.breed ? data.breed : 'not available'}</p>                
+        </div>
+        <div class="flex">
             <img class="w-4 mr-1" src="./images/date.png" alt="" />
-            <p>Birth: ${data.date_of_birth}</p> 
-    </div>
-    <div class="flex">
+            <p>Birth: ${data.date_of_birth ? data.date_of_birth : 'not available'}</p> 
+        </div>
+        <div class="flex">
             <img class="w-4 mr-1" src="./images/gendar.png" alt="" />
-            <p>Gender: ${data.gender}</p> 
-    </div>
-    <div class="flex">
+            <p>Gender: ${data.gender ? data.gender : 'not available'}</p> 
+        </div>
+        <div class="flex">
             <img class="w-4 mr-1" src="./images/dollar.png" alt="" />
-            <p>Price: ${data.price}</p> 
+            <p>Price: ${data.price ? data.price : 'not available'}</p> 
+        </div>
+        <div class="flex">
+            <img class="w-4 mr-1" src="./images/vaccine.png" alt="" />
+            <p>Price: ${data.vaaccinated_status ? data.vaaccinated_status : 'not available'}</p> 
+        </div>
     </div>
     <hr/>
+    <h2 class="font-bold my-4">Details Information</h2>
     <div class="my-3">${data.pet_details}</div>
     <button class="close w-full p-3 bg-green-200 text-[#0E7A81] font-semibold border rounded-md">Cancle</button>`;
 
