@@ -2,7 +2,7 @@
 > 8 Oct 2024
 
 
-# Peddy Pet Shop | [Live Link](www)
+# Peddy Pet Shop | [Live Link](https://6th-assignment-ph.surge.sh/)
 
 ## Overview
 Peddy Pet Shop is a user-friendly website designed to help you find and adopt your next best friend from a selection of four different animal categories. With seamless navigation and interactive features, this platform offers a smooth and enjoyable adoption experience.
